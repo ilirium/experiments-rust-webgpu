@@ -1,8 +1,12 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
+
 // use wgpu;
 // use wgpu::util::DeviceExt;
 
 async fn run() {
-    let steps = execute_gpu().await.unwrap();
+    // let steps = execute_gpu().await.unwrap();
+    execute_gpu().await;
 }
 
 
@@ -35,13 +39,13 @@ async fn execute_gpu() -> Option<Vec<u32>> {
         return None;
     }
 
-    println!("*** info: {:?}", info);
+    println!("*** info: {:?}\n", info);
 
     return None;
 }
 
 fn main() {
-    println!("*** surma-csv started...");
+    println!("*** surma-csv started...\n");
 
     #[cfg(not(target_arch = "wasm32"))]
     {
